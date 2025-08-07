@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple single page application displaying hello text">
+    <title>Hello SPA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <span class="logo-text">Hello SPA</span>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="hero-section">
+                <div class="glass-card">
+                    <div class="hello-content">
+                        <h1 class="hello-title" id="helloTitle">
+                            <span class="hello-word">Hello</span>
+                            <span class="wave-emoji">👋</span>
+                        </h1>
+                        <p class="hello-subtitle">Welcome to your single page application</p>
+                        <div class="hello-actions">
+                            <button class="btn btn-primary" id="greetBtn" aria-label="Get personalized greeting">
+                                Say Hello
+                            </button>
+                            <button class="btn btn-secondary" id="themeBtn" aria-label="Toggle dark mode">
+                                <span class="theme-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="features-section">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">Fast & Lightweight</h3>
+                        <p class="feature-description">Built with vanilla HTML, CSS, and JavaScript for optimal performance</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">Responsive Design</h3>
+                        <p class="feature-description">Looks great on all devices with mobile-first approach</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3 class="feature-title">Modern UI</h3>
+                        <p class="feature-description">Clean design with glass morphism effects and smooth animations</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2024 Hello SPA. Made with ❤️</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading indicator -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite">
+        <div class="toast-content">
+            <span class="toast-message" id="toastMessage"></span>
+            <button class="toast-close" id="toastClose" aria-label="Close notification">&times;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
